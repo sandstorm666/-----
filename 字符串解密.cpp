@@ -12,7 +12,7 @@ bool Vaild(int num)
         return false;
 }
 //返回方法数量
-int decode(vector<int> &v, int &x)
+int decode(vector<int>& v, int& x)
 {
     //求解出最大值，最小值,倒数第二小的值
     //如果有两个小于65的且不一样的值，则无解
@@ -46,7 +46,6 @@ int decode(vector<int> &v, int &x)
     }
     //从空格判断,如果有空格只有一种解法或者无解
     //如果没有空格，则可能有多种解法。
-    cout << "????" << endl;
     if (minVal == midVal && midVal == maxVal)
     {
         if (minVal < 65)
@@ -58,7 +57,6 @@ int decode(vector<int> &v, int &x)
         {
             cnt += minVal - 65 + 2; //+2，包括都是空格
         }
-        cout << "aaaa" << endl;
         return cnt;
     }
     //3个都直接是合法字符,且没有空格
@@ -76,9 +74,10 @@ int decode(vector<int> &v, int &x)
             x = minVal - 65;
             cnt += x + 1;
         }
-        cout << "bbbb" << endl;
         return cnt;
     }
+    // 只有最大值超了90
+    //else if (Vaild(minVal) && Vaild(midVal))
     else
     {
         int x1 = minVal - 32;
@@ -89,6 +88,7 @@ int decode(vector<int> &v, int &x)
             cnt++;
         }
         //没有空格,最小值大于65，最大值超过90
+        //max和min之间的差不能超过25
         else if (minVal >= 65)
         {
             int x1 = minVal - 65;
@@ -99,10 +99,8 @@ int decode(vector<int> &v, int &x)
                 cnt += x + 1;
             }
         }
-        cout << "cccc" << endl;
         return cnt;
     }
-
     return 0;
 }
 
@@ -124,7 +122,7 @@ int main()
     {
         for (auto n : v)
         {
-            s.append(string{char(n - x)});
+            s.append(string{ char(n - x) });
         }
         cout << s << endl;
     }
