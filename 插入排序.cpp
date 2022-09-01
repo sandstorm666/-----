@@ -1,4 +1,5 @@
 #include <iostream>
+#include <vector>
 using namespace std;
 
 //插入排序的时间复杂度是O(n)
@@ -46,4 +47,3 @@ int main()
     return 0;
 
 }
-
