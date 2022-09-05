@@ -33,8 +33,10 @@ int main()
             maxVal = v;
         if (maxVal - minVal >= 2 * x)
         {
-            minVal = 0;
-            maxVal = 0;
+            // 这里更新minVal和maxVal两个值 
+            // 因为是两个不重叠的区间了，minVal和maxVal需要全部重置一下
+            minVal = v;
+            maxVal = v;
             count++;
         }
     }
