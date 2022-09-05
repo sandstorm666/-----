@@ -20,17 +20,15 @@ void InsertSort(int arr[], int length)
 
             arr[j + 1] = arr[j]; // 已经排序好的序列整体向后移动
             --j;
-
         }
         //不要漏了+1
         arr[j + 1] = temp; // 插入当前的元素
     }
-
 }
 
 int main()
 {
-    int arr[10] = { 9, 2, 8, 2, 3, 2, 4, 10, 34,  5 };
+    int arr[10] = { 9, 2, 8, 2, 3, 2, 4, 10, 34, 5 };
 
     InsertSort(arr, 10);
 
@@ -38,12 +36,7 @@ int main()
     {
 
         cout << arr[i] << " ";
-
     }
     cout << endl;
-
-
-
     return 0;
-
 }
