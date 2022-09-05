@@ -1,4 +1,5 @@
 #include <iostream>
+#include <vector>
 using namespace std;
 
 //插入排序的时间复杂度是O(n)
@@ -27,7 +28,7 @@ void InsertSort(int arr[], int length)
 
 int main()
 {
-    int arr[10] = {9, 2, 8, 2, 3, 2, 4, 10, 34, 5};
+    int arr[10] = { 9, 2, 8, 2, 3, 2, 4, 10, 34, 5 };
 
     InsertSort(arr, 10);
 
